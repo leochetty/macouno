@@ -35,7 +35,7 @@ from macouno import bmesh_extras
 
 def AddLight():
 
-	bpy.ops.mesh.primitive_circle_add(vertices=36, radius=1, fill_type='TRIFAN', view_align=False, enter_editmode=False, location=(0, 0, 0))
+	bpy.ops.mesh.primitive_circle_add(vertices=12, radius=1, fill_type='TRIFAN', view_align=False, enter_editmode=False, location=(0, 0, 0))
 
 	bpy.ops.object.mode_set(mode='EDIT')
 		
@@ -49,6 +49,8 @@ def AddLight():
 	scale_falloff = 'STR'
 
 	bmesh_extras.cast_loop(corners=corners, falloff_scale=falloff_scale, falloff_shape=scale_falloff)
+	
+	
 	
 	bpy.ops.object.mode_set(mode='OBJECT')
 

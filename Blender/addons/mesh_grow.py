@@ -32,6 +32,7 @@ bl_info = {
 	"warning": "",
 	"wiki_url": "",
 	"tracker_url": "",
+	"support": 'TESTING',
 	"category": "Mesh"}
 	
 	
@@ -296,7 +297,7 @@ class Grow_init(bpy.types.Operator):
 		)
 	
 	# Translation
-	translation = FloatProperty(name='Translation', description='Translation in Blender units', default=12.0, min=-1000.0, max=1000.0, soft_min=-1000.0, soft_max=1000.0, step=100, precision=2)
+	translation = FloatProperty(name='Translation', description='Translation in Blender units', default=1.0, min=-1000.0, max=1000.0, soft_min=-1000.0, soft_max=1000.0, step=100, precision=2)
 
 	# Rotation
 	rotation = FloatVectorProperty(name="Rotation", description="Rotation in degrees", default=(0.0, 0.0, 0.0), min=math.radians(-360.0*10), max=math.radians(360.0*10), soft_min=-math.radians(360.0), soft_max=math.radians(360.0), step=500, precision=2, subtype='EULER')
